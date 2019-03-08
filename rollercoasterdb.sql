@@ -22,7 +22,7 @@ CREATE TABLE cedar_point_coasters(
 	build_year int not null,
 	speed int not null,
 	height int not null,
-	duration varchar(30) not null,
+	duration int not null,
 	[description] varchar(200) not null,
 	min_height int not null,
 	ride_video varchar(200) not null,
@@ -39,5 +39,8 @@ ADD [description] varchar(200);
 
 ALTER TABLE cedar_point_coasters
 ADD height int
+
+ALTER TABLE cedar_point_coasters
+ALTER COLUMN duration int
 
 SELECT * FROM cedar_point_coasters
