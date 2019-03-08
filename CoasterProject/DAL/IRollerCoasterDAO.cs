@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CoasterProject.DAL
 {
-    interface IRollerCoasterDAO
+    public interface IRollerCoasterDAO
     {
         IList<RollerCoaster> GetCoasters();
     }
