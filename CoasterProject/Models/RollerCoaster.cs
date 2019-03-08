@@ -8,7 +8,7 @@ namespace CoasterProject.Models
     /// <summary>
     /// Properties of roller coasters
     /// </summary>
-    public class RollerCoasters
+    public class RollerCoaster
     {
         public string Name { get; set; }
         public int BuildYear { get; set; }
