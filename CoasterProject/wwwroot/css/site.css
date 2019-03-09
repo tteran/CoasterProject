@@ -30,6 +30,7 @@
     color: white;
     font-size: 20px;
     font-weight: bold;
+    text-decoration: none;
 }
 
 /*Nav styling end*/
@@ -58,3 +59,11 @@
 
 /*Detail View End*/
 
+/*Home page view*/
+
+.home-page-pic {
+    width: 100%;
+    height: auto;
+}
+
+/*Home page view end*/
