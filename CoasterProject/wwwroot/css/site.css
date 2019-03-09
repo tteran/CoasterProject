@@ -1,4 +1,42 @@
-﻿.tile {
+﻿/*Nav Styling*/
+.top-nav {
+    display: grid;
+    grid-auto-columns: 0.25fr 2fr 1fr 1fr 1fr 1fr 1fr 0.25fr;
+    grid-template-areas: ". logo nav nav nav nav nav .";
+    background-color: #174eaf;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.header {
+    padding-top: 10px;
+    grid-area: logo;
+}
+
+.list {
+    grid-area: nav;
+}
+
+.list ul {
+    display: flex;
+    flex-direction: row;
+    align-content: flex-end;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.list ul li {
+    list-style: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/*Nav styling end*/
+
+/*Detail View Styling*/
+
+.tile {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 10px;
@@ -13,4 +51,10 @@
     display: flex;
     flex-direction: column;
 }
+
+.tile-name {
+    text-decoration: none;
+}
+
+/*Detail View End*/
 

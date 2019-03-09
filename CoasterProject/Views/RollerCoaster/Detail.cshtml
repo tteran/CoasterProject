@@ -3,16 +3,16 @@
     ViewData["Title"] = "Detail";
 }
 
-<h2>Detail View</h2>
+<h2>@Model.Name</h2>
 
-<img src="@Model.RideImage" />
+<img class="detail-image" src="@Model.RideImage" />
 
 <h2>@Model.Description</h2>
 
 <h3>Height Requirement: @Model.MinHeight</h3>
 
-<p>Height: (@Model.Height) feet</p>
-<p>Speed: (@Model.Speed)MPH</p>
+<p>Height: @Model.Height feet</p>
+<p>Speed: @Model.Speed MPH</p>
 <p>Speed: @Model.Duration minutes</p>
 
 <iframe width="560" height="315" src="@Model.RideVideo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
