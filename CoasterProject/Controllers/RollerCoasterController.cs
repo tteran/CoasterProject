@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using CoasterProject.DAL;
+using CoasterProject.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CoasterProject.Controllers
@@ -17,7 +18,9 @@ namespace CoasterProject.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            IList<RollerCoaster> coasters = rollerCoasterDAO.GetCoasters();
+
+            return View(coasters);
         }
 
 

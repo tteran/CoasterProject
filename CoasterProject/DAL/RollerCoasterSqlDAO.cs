@@ -51,12 +51,12 @@ namespace CoasterProject.DAL
             rollerCoaster.Name = Convert.ToString(reader["name"]);
             rollerCoaster.BuildYear = Convert.ToInt32(reader["build_year"]);
             rollerCoaster.Speed = Convert.ToInt32(reader["speed"]);
-            rollerCoaster.Height = Convert.ToInt32(reader["height"]);
             rollerCoaster.Duration = Convert.ToInt32(reader["duration"]);
-            rollerCoaster.Description = Convert.ToString(reader["description"]);
             rollerCoaster.MinHeight = Convert.ToInt32(reader["min_height"]);
             rollerCoaster.RideVideo = Convert.ToString(reader["ride_video"]);
             rollerCoaster.RideImage = Convert.ToString(reader["ride_image"]);
+            rollerCoaster.Description = Convert.ToString(reader["description"]);
+            rollerCoaster.Height = Convert.ToInt32(reader["height"]);          
 
             return rollerCoaster;
         }

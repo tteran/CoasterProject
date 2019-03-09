@@ -1,5 +1,12 @@
-﻿@{
+﻿@model IList<RollerCoaster>
+@{
     ViewData["Title"] = "Index";
 }
 
 <h2>Index</h2>
+
+@foreach(RollerCoaster rollerCoaster in Model)
+{
+    <img src="@rollerCoaster.RideImage" />
+    <h2>@rollerCoaster.Name</h2>
+}
