@@ -97,4 +97,77 @@ ALTER COLUMN duration int
 ALTER TABLE cedar_point_coasters
 ALTER COLUMN [description] varchar(300)
 
+UPDATE cedar_point_coasters
+SET ride_video = 'https://www.youtube.com/embed/t5aeLbY4bE8'
+WHERE id = 1;
+
+UPDATE cedar_point_coasters
+SET ride_video = 'https://www.youtube.com/embed/IpJ9l2w4haw'
+WHERE id = 2;
+
+UPDATE cedar_point_coasters
+SET ride_video = 'https://www.youtube.com/embed/a1iGwMl-SDc'
+WHERE id = 4;
+
+UPDATE cedar_point_coasters
+SET ride_video = 'https://www.youtube.com/embed/pkOqi7Du3Og'
+WHERE id = 5
+
+UPDATE cedar_point_coasters
+SET ride_video = 'https://www.youtube.com/embed/O5anQIKQgAo'
+WHERE id = 6
+
+UPDATE cedar_point_coasters
+SET ride_video = 'https://www.youtube.com/embed/2cwUMqSWSmU'
+WHERE id = 7
+
+UPDATE cedar_point_coasters
+SET ride_video = 'https://www.youtube.com/embed/3nPG4l9-LkM'
+WHERE id = 8
+
+UPDATE cedar_point_coasters
+SET ride_video = 'https://www.youtube.com/embed/BIJBz1w3uYw'
+WHERE id = 9
+
+UPDATE cedar_point_coasters
+SET ride_video = 'https://www.youtube.com/embed/MybcORGVkEU'
+WHERE id = 10
+
+UPDATE cedar_point_coasters
+SET ride_video = 'https://www.youtube.com/embed/FvNy7fTpZkg'
+WHERE id = 11
+
+UPDATE cedar_point_coasters
+SET ride_video = 'https://www.youtube.com/embed/Tb2H-8CQuyY'
+WHERE id = 12
+
+UPDATE cedar_point_coasters
+SET ride_video = 'https://www.youtube.com/embed/RuweAtyeUuU'
+WHERE id = 13
+
+UPDATE cedar_point_coasters
+SET ride_video = 'https://www.youtube.com/embed/JVKK4QxWSNo'
+WHERE id = 14
+
+UPDATE cedar_point_coasters
+SET ride_video = 'https://www.youtube.com/embed/lBgNx8nts70'
+WHERE id = 15
+
+UPDATE cedar_point_coasters
+SET ride_video = 'https://www.youtube.com/embed/6EjSl_FKDBY'
+WHERE id = 16
+
+UPDATE cedar_point_coasters
+SET ride_video = 'https://www.youtube.com/embed/T9p8x-D64vk'
+WHERE id = 17
+
+UPDATE cedar_point_coasters
+SET ride_video = 'https://www.youtube.com/embed/gkVt5uryylQ'
+WHERE id = 18
+
+UPDATE cedar_point_coasters
+SET ride_video = 'https://www.youtube.com/embed/fDBydpPplzQ'
+WHERE id = 19
+
 SELECT * FROM cedar_point_coasters
+
