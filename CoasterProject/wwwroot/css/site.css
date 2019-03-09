@@ -1,1 +1,16 @@
-﻿
+﻿.tile {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.ride-image {
+    width: auto;
+    height: 200px;
+}
+
+.tile-view {
+    display: flex;
+    flex-direction: column;
+}
+

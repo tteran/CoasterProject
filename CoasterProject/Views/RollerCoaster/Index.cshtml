@@ -5,8 +5,14 @@
 
 <h2>Index</h2>
 
+<div class="tile">
+
 @foreach(RollerCoaster rollerCoaster in Model)
 {
-    <img src="@rollerCoaster.RideImage" />
-    <h2>@rollerCoaster.Name</h2>
+    <div class="tile-view">
+        <img class="ride-image" src="@rollerCoaster.RideImage" />
+        <h2>@rollerCoaster.Name</h2>
+    </div>
 }
+
+</div>
