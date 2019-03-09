@@ -10,6 +10,7 @@ namespace CoasterProject.Models
     /// </summary>
     public class RollerCoaster
     {
+        public int Id { get; set; }
         public string Name { get; set; }
         public int BuildYear { get; set; }
         public int Speed { get; set; }

@@ -32,7 +32,7 @@ CREATE TABLE cedar_point_coasters(
 );
 
 INSERT INTO cedar_point_coasters ([name], build_year, speed, height, duration, [description], min_height, ride_video, ride_image)
-VALUES ('Blue Streak', 1964, 40, 78, 2, 'Cedar Points oldest coaster. Family favorite since it opened in 1964. Classic out and back style. Packed with hills, thrillsand history.', 48, 'https://www.youtube.com/watch?v=t5aeLbY4bE8', 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Blue_streak1_CP.JPG/1200px-Blue_streak1_CP.JPG');
+VALUES ('Blue Streak', 1964, 40, 78, 2, 'Cedar Points oldest coaster. Family favorite since it opened in 1964. Classic out and back style. Packed with hills, thrillsand history.', 48, '"https://www.youtube.com/embed/t5aeLbY4bE8"', 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Blue_streak1_CP.JPG/1200px-Blue_streak1_CP.JPG');
 
 INSERT INTO cedar_point_coasters ([name], build_year, speed, height, duration, [description], min_height, ride_video, ride_image)
 VALUES ('Cedar Creek Mine Ride', 1969, 40, 48, 3, 'Located in Frontiert Town this coaster is a great choice for families. With two lift hills, helixes and sharp turns anyone can love this ride', 48, 'https://www.youtube.com/watch?v=praUn8xVVL0', 'https://coasterpedia.net/w/images/thumb/9/95/Cedar_Creek_Mine_Ride_train.jpg/500px-Cedar_Creek_Mine_Ride_train.jpg');

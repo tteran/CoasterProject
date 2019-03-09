@@ -13,5 +13,11 @@ namespace CoasterProject.DAL
         /// </summary>
         /// <returns></returns>
         IList<RollerCoaster> GetCoasters();
+
+        /// <summary>
+        /// Gets a single coaster for the detail view.
+        /// </summary>
+        /// <returns></returns>
+        RollerCoaster GetCoaster(int id);
     }
 }

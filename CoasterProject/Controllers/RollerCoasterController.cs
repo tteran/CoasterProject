@@ -23,6 +23,10 @@ namespace CoasterProject.Controllers
             return View(coasters);
         }
 
-
+        public IActionResult Detail(int id)
+        {
+            RollerCoaster rollerCoaster = rollerCoasterDAO.GetCoaster(id);
+            return View(rollerCoaster);
+        }
     }
 }

@@ -10,8 +10,10 @@
 @foreach(RollerCoaster rollerCoaster in Model)
 {
     <div class="tile-view">
-        <img class="ride-image" src="@rollerCoaster.RideImage" />
-        <h2>@rollerCoaster.Name</h2>
+        <a asp-controller="rollercoaster" asp-action="detail" asp-route-id="@rollerCoaster.Id">
+            <img class="ride-image" src="@rollerCoaster.RideImage" />
+            <h2>@rollerCoaster.Name</h2>
+        </a>
     </div>
 }
 

@@ -15,6 +15,11 @@ namespace CoasterProject.DAL
             this.connectionString = connectionString;
         }
 
+        public RollerCoaster GetCoaster(int id)
+        {
+            return GetCoasters().FirstOrDefault(r => r.Id == id);
+        }
+
         public IList<RollerCoaster> GetCoasters()
         {
             IList<RollerCoaster> rollerCoasters = new List<RollerCoaster>();
@@ -48,6 +53,7 @@ namespace CoasterProject.DAL
         {
             RollerCoaster rollerCoaster = new RollerCoaster();
 
+            rollerCoaster.Id = Convert.ToInt32(reader["id"]);
             rollerCoaster.Name = Convert.ToString(reader["name"]);
             rollerCoaster.BuildYear = Convert.ToInt32(reader["build_year"]);
             rollerCoaster.Speed = Convert.ToInt32(reader["speed"]);
