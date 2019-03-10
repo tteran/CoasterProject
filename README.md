@@ -16,3 +16,4 @@ Side Project during Tech Elevator
 * User can add rides they have ridden to their own ride tracker
 * Make the unclickable links clickable and add content to the views
 * Add JavaScript to the page to add fun behavior
+* Sign-in feature
