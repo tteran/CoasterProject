@@ -169,5 +169,9 @@ UPDATE cedar_point_coasters
 SET ride_video = 'https://www.youtube.com/embed/fDBydpPplzQ'
 WHERE id = 19
 
+UPDATE cedar_point_coasters
+SET description = 'Cedar Points oldest coaster. Family favorite since it opened in 1964. Classic out and back style. Packed with hills, thrills and history.'
+WHERE id = 1
+
 SELECT * FROM cedar_point_coasters
 

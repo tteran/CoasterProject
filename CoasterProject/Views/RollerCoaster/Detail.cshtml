@@ -3,16 +3,33 @@
     ViewData["Title"] = "Detail";
 }
 
-<h2>@Model.Name</h2>
+<div class="banner">
+    <div class="text">
+        <p>@Model.Name</p>
+    </div>
+    <img class="detail-image" src="@Model.RideImage" />
+</div>
 
-<img class="detail-image" src="@Model.RideImage" />
+<div class="description-height">
+    <p>@Model.Description</p>
+    <p class="height-requirement">Height Requirement: @Model.MinHeight" minimum</p>
+</div>
 
-<h2>@Model.Description</h2>
+<div class="height-speed-duration">
+    <div id="height">
+        <p>HEIGHT</p>
+        <span id="p-height">@Model.Height Feet</span>
+    </div>
+    <div id="speed">
+        <p>SPEED</p>
+        <span id="p-speed">@Model.Speed MPH</span>
+    </div>
+    <div id="duration">
+        <p>DURATION</p>
+        <span id="p-duration">@Model.Duration Minutes</span>
+    </div>
+    
+</div>
 
-<h3>Height Requirement: @Model.MinHeight</h3>
 
-<p>Height: @Model.Height feet</p>
-<p>Speed: @Model.Speed MPH</p>
-<p>Speed: @Model.Duration minutes</p>
-
-<iframe width="560" height="315" src="@Model.RideVideo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="600" src="@Model.RideVideo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

@@ -3,18 +3,42 @@
     ViewData["Title"] = "Index";
 }
 
-<h2>Play</h2>
+<img class="tile-banner" src="~/images/CedarPoint.edit.copy.jpg" />
 
-<div class="tile">
+<div class="tile-info">
+    <p>Cedar Point has 18 rollercoasters in total ranging from Wilderness Run to the 420ft tall Top Thrill Dragster.</p>
 
-@foreach(RollerCoaster rollerCoaster in Model)
-{
-    <div class="tile-view">
-        <a asp-controller="rollercoaster" asp-action="detail" asp-route-id="@rollerCoaster.Id">
-            <img class="ride-image" src="@rollerCoaster.RideImage" />
-            <h2 class="tile-name">@rollerCoaster.Name</h2>
-        </a>
+    <p>
+        For the seasoned thrill seekers coasters like: Raptor, Millenium, Force and
+        Maverick are sure to please. And for the kiddos Woodstock Express is a greater starter coaster!
+    </p>
+
+    <p>
+        Whether you are diving straight down on Valravn, racing a friend on Gemini or taking flight
+        through the keyholes on Gatekeeper you are sure to have the time of your life!
+    </p>
+
+    <p>
+        After experiencing Cedar Point the <b>Roller Coaster Capital of the World!&reg;</b> you and your family
+        are sure to return year after year.
+    </p>
+</div>
+
+
+
+
+<div class="index-view">
+    <div class="tile">
+
+        @foreach (RollerCoaster rollerCoaster in Model)
+        {
+            <div class="tile-view">
+                <a asp-controller="rollercoaster" asp-action="detail" asp-route-id="@rollerCoaster.Id">
+                    <img class="ride-image" src="@rollerCoaster.RideImage" />
+                    <h2 class="tile-name">@rollerCoaster.Name</h2>
+                </a>
+            </div>
+        }
+
     </div>
-}
-
 </div>
