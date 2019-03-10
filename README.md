@@ -10,6 +10,7 @@ Side Project during Tech Elevator
 * [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
 * [Visual Studio 2017](https://visualstudio.microsoft.com/vs/whatsnew/)
 * [SSMS](https://docs.microsoft.com/en-us/sql/ssms/sql-server-management-studio-ssms?view=sql-server-2017)
+* [SQL](https://docs.microsoft.com/en-us/sql/?view=sql-server-2017)
 * [Razor](https://docs.microsoft.com/en-us/aspnet/core/mvc/views/razor?view=aspnetcore-2.2)
 
 ## Features to Come
