@@ -2,6 +2,7 @@
 
 body {
     font-family: 'Crimson Text', serif;
+    background-image: url("~/images/whitewall.jpeg");
 }
 
 /*Nav Styling*/
@@ -10,8 +11,14 @@ body {
     grid-auto-columns: 0.25fr 2fr 1fr 1fr 1fr 1fr 1fr 0.25fr;
     grid-template-areas: ". logo nav nav nav nav nav .";
     background-color: #174eaf;
-    margin-top: 5px;
     margin-bottom: 5px;
+    position: fixed;
+    width: 100%;
+    padding-top: 5px;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
 }
 
 .header {
@@ -164,6 +171,8 @@ body {
 .home-page-pic {
     width: 100%;
     height: auto;
+    position: relative;
+    z-index: 1;
 }
 
 /*Home page view end*/
