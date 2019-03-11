@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CoasterProject.Controllers
 {
-    public class RideTrackerController : Controller
+    public class RideForumController : Controller
     {
         public IActionResult Index()
         {

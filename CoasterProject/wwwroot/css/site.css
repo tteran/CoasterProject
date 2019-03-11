@@ -125,6 +125,10 @@ body {
         padding-left: 240px;
         padding-right: 200px;
     }
+
+    .tile-info {
+        padding-left: 280px;
+    }
 }
 
 @media only screen and (max-width: 1280px)
