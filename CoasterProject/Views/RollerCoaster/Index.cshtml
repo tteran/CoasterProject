@@ -32,12 +32,15 @@
 
         @foreach (RollerCoaster rollerCoaster in Model)
         {
-            <div class="tile-view">
-                <a asp-controller="rollercoaster" asp-action="detail" asp-route-id="@rollerCoaster.Id">
-                    <img class="ride-image" src="@rollerCoaster.RideImage" />
-                    <h2 class="tile-name">@rollerCoaster.Name</h2>
-                </a>
-            </div>
+        <div class="tile-view">
+            <a asp-controller="rollercoaster" asp-action="detail" asp-route-id="@rollerCoaster.Id">
+                <img class="ride-image" src="@rollerCoaster.RideImage" />
+            </a>
+            <a asp-controller="rollercoaster" asp-action="detail" asp-route-id="@rollerCoaster.Id">
+                <h2 class="tile-name">@rollerCoaster.Name</h2>
+            </a>
+
+        </div>
         }
 
     </div>
