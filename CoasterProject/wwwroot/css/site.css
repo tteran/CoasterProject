@@ -7,8 +7,8 @@ body {
 /*Nav Styling*/
 .top-nav {
     display: grid;
-    grid-auto-columns: 0.25fr 2fr 1fr 1fr 1fr 1fr 1fr 0.25fr;
-    grid-template-areas: ". logo nav nav nav nav nav .";
+    grid-auto-columns: 0.25fr 2fr 1fr 1fr 1fr 1fr 1fr 1fr 0.25fr;
+    grid-template-areas: ". logo nav nav nav nav nav nav .";
     background-color: #174eaf;
     margin-bottom: 5px;
     position: fixed;
