@@ -3,6 +3,7 @@ Side Project during Tech Elevator
 
 ## Functionality
 * User can see a displayed view of roller coasters and click on an item to get a further displayed page
+* Through the navigaton bar the user can post to a forum, rate rides and comment on it
 
 ## Languages and Tech Used
 * [C#](https://docs.microsoft.com/en-us/dotnet/csharp/)
