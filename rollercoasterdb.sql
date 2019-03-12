@@ -31,6 +31,18 @@ CREATE TABLE cedar_point_coasters (
 	constraint pk_cedar_point_coasters_id primary key (id)
 );
 
+CREATE TABLE ride_forum (
+
+	id int identity(1,1),
+	username varchar(30) not null,
+	rating int not null,
+	post_date datetime default getdate(),
+	forum_title varchar(100) not null,
+	forum_text varchar(1000) not null,
+
+	constraint pk_ride_forum_id primary key (id)
+);
+
 INSERT INTO cedar_point_coasters ([name], build_year, speed, height, duration, [description], min_height, ride_video, ride_image)
 VALUES ('Blue Streak', 1964, 40, 78, 2, 'Cedar Points oldest coaster. Family favorite since it opened in 1964. Classic out and back style. Packed with hills, thrills and history.', 48, '"https://www.youtube.com/embed/t5aeLbY4bE8"', 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Blue_streak1_CP.JPG/1200px-Blue_streak1_CP.JPG');
 

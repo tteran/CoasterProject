@@ -33,6 +33,7 @@ namespace CoasterProject
             });
 
             services.AddTransient<IRollerCoasterDAO>(r => new RollerCoasterSqlDAO(Configuration.GetConnectionString("Default")));
+            services.AddTransient<IForumDAO>(f => new ForumSqlDAO(Configuration.GetConnectionString("Default")));
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }

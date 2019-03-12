@@ -6,12 +6,19 @@ using System.Threading.Tasks;
 
 namespace CoasterProject.DAL
 {
-    interface IForumDAO
+    public interface IForumDAO
     {
         /// <summary>
         /// Gets forum posts.
         /// </summary>
         /// <returns></returns>
         IList<ForumPost> GetPosts();
+
+        /// <summary>
+        /// Saves a post to the forum.
+        /// </summary>
+        /// <param name="newPost"></param>
+        /// <returns></returns>
+        int SavePost(ForumPost newPost);
     }
 }

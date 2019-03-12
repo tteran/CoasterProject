@@ -14,11 +14,7 @@ namespace CoasterProject.DAL
         {
             this.connectionString = connectionString;
         }
-
-        /// <summary>
-        /// Gets all the forum posts from DB.
-        /// </summary>
-        /// <returns></returns>
+        
         public IList<ForumPost> GetPosts()
         {
             IList<ForumPost> forumPosts = new List<ForumPost>();
@@ -47,6 +43,36 @@ namespace CoasterProject.DAL
             }
 
             return forumPosts;
+        }
+
+        public int SavePost(ForumPost newPost)
+        {
+            int newPostsAdded = 0;
+
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    
+                    string sqlCommand = $"INSERT INTO ride_forum (username, rating, post_date, forum_title, forum_text)" +
+                                        "VALUES (@username, @rating, @post_date, @forum_title, @forum_text)";
+                    SqlCommand cmd = new SqlCommand(sqlCommand, conn);
+                    cmd.Parameters.AddWithValue("@username", newPost.Username);
+                    cmd.Parameters.AddWithValue("@rating", newPost.Rating);
+                    cmd.Parameters.AddWithValue("@post_date", newPost.PostDate);
+                    cmd.Parameters.AddWithValue("@forum_title", newPost.ForumTitle);
+                    cmd.Parameters.AddWithValue("@forum_text", newPost.ForumText);
+
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch(SqlException ex)
+            {
+                throw;
+            }
+
+            return newPostsAdded++;
         }
 
         private ForumPost ConvertForumPostToReader(SqlDataReader reader)
