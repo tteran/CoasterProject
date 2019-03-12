@@ -6,6 +6,7 @@ Side Project during Tech Elevator
 * Through the navigaton bar the user can post to a forum, rate rides and comment on it
 
 ## Screenshots
+* Tile view of the roller coasters at Cedar Point
 ![Play View](Screenshots/PlayViewCrop.png)
 
 ## Languages and Tech Used
