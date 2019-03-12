@@ -55,12 +55,11 @@ namespace CoasterProject.DAL
                 {
                     conn.Open();
                     
-                    string sqlCommand = $"INSERT INTO ride_forum (username, rating, post_date, forum_title, forum_text)" +
-                                        "VALUES (@username, @rating, @post_date, @forum_title, @forum_text)";
+                    string sqlCommand = $"INSERT INTO ride_forum (username, rating, forum_title, forum_text)" +
+                                        "VALUES (@username, @rating, @forum_title, @forum_text)";
                     SqlCommand cmd = new SqlCommand(sqlCommand, conn);
                     cmd.Parameters.AddWithValue("@username", newPost.Username);
                     cmd.Parameters.AddWithValue("@rating", newPost.Rating);
-                    cmd.Parameters.AddWithValue("@post_date", newPost.PostDate);
                     cmd.Parameters.AddWithValue("@forum_title", newPost.ForumTitle);
                     cmd.Parameters.AddWithValue("@forum_text", newPost.ForumText);
 

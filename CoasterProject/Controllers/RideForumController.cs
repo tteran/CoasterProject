@@ -23,11 +23,17 @@ namespace CoasterProject.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult New(ForumPost model)
         {
+            if(!ModelState.IsValid)
+            {
+                return View(model);
+            }
+
             forumDAO.SavePost(model);
 
-            return RedirectToAction("Index", new { Username = model.Username, Rating = model.Rating, PostDate = model.PostDate, ForumTitle = model.ForumTitle, ForumText = model.ForumText });
+            return RedirectToAction("Index", new { Username = model.Username, Rating = model.Rating, ForumTitle = model.ForumTitle, ForumText = model.ForumText });
         }
 
         [HttpGet]

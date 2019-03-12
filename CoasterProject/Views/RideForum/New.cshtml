@@ -1,7 +1,28 @@
-﻿
+﻿@model ForumPost
 @{
     ViewData["Title"] = "New";
 }
 
-<h2>New</h2>
+<h1>Roller Coaster Forum</h1>
+
+<form method="post" asp-controller="rideforum" asp-action="new">
+
+    <label asp-for="Username"></label>
+    <input asp-for="Username" placeholder="CoasterFan123" type="text" />
+    <span asp-validation-for="Username"></span>
+
+    <label asp-for="Rating"></label>
+    <input asp-for="Rating" type="number" />
+    <span asp-validation-for="Rating"></span>
+
+    <label asp-for="ForumTitle"></label>
+    <input asp-for="ForumTitle" placeholder="Best Ride Ever" type="text" />
+    <span asp-validation-for="ForumTitle"></span>
+
+    <label asp-for="ForumText"></label>
+    <input asp-for="ForumText" placeholder="10/10 would ride again" type="text" />
+    <span asp-validation-for="ForumText"></span>
+
+    <input type="submit" value="Submit" />
+</form>
 
