@@ -1,4 +1,4 @@
-# Coaster Project
+# Coaster Project Application
 Side Project during Tech Elevator
 
 ## Functionality
