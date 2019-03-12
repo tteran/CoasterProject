@@ -5,6 +5,9 @@ Side Project during Tech Elevator
 * User can see a displayed view of roller coasters and click on an item to get a further displayed page
 * Through the navigaton bar the user can post to a forum, rate rides and comment on it
 
+## Screenshots
+![Play View](Screenshots/PlayViewCrop.png)
+
 ## Languages and Tech Used
 * [C#](https://docs.microsoft.com/en-us/dotnet/csharp/)
 * [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
