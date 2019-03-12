@@ -14,12 +14,12 @@ namespace CoasterProject.Models
         public int Id { get; set; }
 
         [Display(Name = "Username")]
-        [Required]
+        [Required(ErrorMessage = "Username must be at least 8 characters")]
         [MinLength(8)]
         public string Username { get; set; }
 
         [Display(Name = "Rating")]
-        [Required]
+        [Required(ErrorMessage = "Rating must be between 1 and 10")]
         [Range(1, 10)]
         public int Rating { get; set; }
 
