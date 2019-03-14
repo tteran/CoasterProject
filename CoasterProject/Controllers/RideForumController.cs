@@ -28,12 +28,12 @@ namespace CoasterProject.Controllers
         {
             if(!ModelState.IsValid)
             {
-                return View(model);
+                forumDAO.SavePost(model);
+                return RedirectToAction("Index", new { Username = model.Username, Rating = model.Rating, ForumTitle = model.ForumTitle, ForumText = model.ForumText });
             }
 
-            forumDAO.SavePost(model);
-
-            return RedirectToAction("Index", new { Username = model.Username, Rating = model.Rating, ForumTitle = model.ForumTitle, ForumText = model.ForumText });
+            return View(model);
+            
         }
 
         [HttpGet]

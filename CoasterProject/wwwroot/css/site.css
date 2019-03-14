@@ -206,3 +206,39 @@ body {
 }
 
 /*Home page view end*/
+
+/*Ride forum styling*/
+
+.ride-forum {
+    display: flex;
+    flex-direction: column;
+    background-color: lightblue;
+    width: 25%;
+    margin-bottom: 15px;
+}
+
+.ride-forum div {
+    padding: 20px;
+    text-align: center;
+}
+
+.forum-submit {
+    margin: auto;
+    border-radius: 7px;
+    background-color: green;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    text-shadow: 5px;
+    width: 10%;   
+}
+
+.forum-submit:hover {
+    background-color: darkgreen;
+}
+
+.forum-h1 {
+    margin-top: 100px;
+}
+
+/*End ride forum styling*/

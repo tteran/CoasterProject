@@ -13,23 +13,19 @@ namespace CoasterProject.Models
     {
         public int Id { get; set; }
 
-        [Display(Name = "Username")]
         [Required(ErrorMessage = "Username must be at least 8 characters")]
         [MinLength(8)]
         public string Username { get; set; }
 
-        [Display(Name = "Rating")]
         [Required(ErrorMessage = "Rating must be between 1 and 10")]
         [Range(1, 10)]
         public int Rating { get; set; }
 
         public DateTime PostDate { get; set; }
 
-        [Display(Name = "Subject")]
         [Required]
         public string ForumTitle { get; set; }
 
-        [Display(Name = "Comment")]
         [Required]
         public string ForumText { get; set; }
 

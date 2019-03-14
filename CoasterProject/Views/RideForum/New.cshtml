@@ -3,26 +3,35 @@
     ViewData["Title"] = "New";
 }
 
-<h1>Roller Coaster Forum</h1>
+<h1 class="forum-h1">Roller Coaster Forum</h1>
 
-<form method="post" asp-controller="rideforum" asp-action="new">
+<form method="post" asp-controller="rideforum" asp-action="index">
 
-    <label asp-for="Username"></label>
-    <input asp-for="Username" placeholder="CoasterFan123" type="text" />
-    <span asp-validation-for="Username"></span>
+    <div class="ride-forum">
 
-    <label asp-for="Rating"></label>
-    <input asp-for="Rating" type="number" />
-    <span asp-validation-for="Rating"></span>
+        <div class="forum-username">
+            <input asp-for="Username" placeholder="Your Username" type="text" />
+            <span asp-validation-for="Username"></span>
+        </div>
 
-    <label asp-for="ForumTitle"></label>
-    <input asp-for="ForumTitle" placeholder="Best Ride Ever" type="text" />
-    <span asp-validation-for="ForumTitle"></span>
+        <div class="forum-rating">
+            <input asp-for="Rating" placeholder="Your Rating" type="number" />
+            <span asp-validation-for="Rating"></span>
+        </div>
 
-    <label asp-for="ForumText"></label>
-    <input asp-for="ForumText" placeholder="10/10 would ride again" type="text" />
-    <span asp-validation-for="ForumText"></span>
+        <div class="forum-forum-title">
+            <input asp-for="ForumTitle" placeholder="Your Subject Title" type="text" />
+            <span asp-validation-for="ForumTitle"></span>
+        </div>
 
-    <input type="submit" value="Submit" />
+        <div class="forum-forum-text">
+            <input asp-for="ForumText" placeholder="Your Subject Message" type="text" />
+            <span asp-validation-for="ForumText"></span>
+        </div>
+
+    </div>
+
+    <input class="forum-submit" type="submit" value="Submit" />
+
 </form>
 
