@@ -17,4 +17,10 @@
     <ProjectReference Include="..\CoasterProject\CoasterProject.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="test-script.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

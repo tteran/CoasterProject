@@ -2,16 +2,16 @@
 USE master;
 GO
 
--- Delete the SSGeek Database (IF EXISTS)
+-- Delete the CoasterSideProject Database (IF EXISTS)
 IF EXISTS(select * from sys.databases where name='CoasterSideProject')
 DROP DATABASE CoasterSideProject;
 GO
 
--- Create a new SSGeek Database
+-- Create a new CoasterSideProject Database
 CREATE DATABASE CoasterSideProject;
 GO
 
--- Switch to the SSGeek Database
+-- Switch to the CoasterSideProject Database
 USE CoasterSideProject;
 GO
 
@@ -44,7 +44,7 @@ CREATE TABLE ride_forum (
 );
 
 INSERT INTO cedar_point_coasters ([name], build_year, speed, height, duration, [description], min_height, ride_video, ride_image)
-VALUES ('Blue Streak', 1964, 40, 78, 2, 'Cedar Points oldest coaster. Family favorite since it opened in 1964. Classic out and back style. Packed with hills, thrills and history.', 48, '"https://www.youtube.com/embed/t5aeLbY4bE8"', 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Blue_streak1_CP.JPG/1200px-Blue_streak1_CP.JPG');
+VALUES ('Blue Streak', 1964, 40, 78, 2, 'Cedar Points oldest coaster. Family favorite since it opened in 1964. Classic out and back style. Packed with hills, thrills and history.', 48, 'https://www.youtube.com/embed/t5aeLbY4bE8', 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Blue_streak1_CP.JPG/1200px-Blue_streak1_CP.JPG');
 
 INSERT INTO cedar_point_coasters ([name], build_year, speed, height, duration, [description], min_height, ride_video, ride_image)
 VALUES ('Cedar Creek Mine Ride', 1969, 40, 48, 3, 'Located in Frontier Town this coaster is a great choice for families. With two lift hills, helixes and sharp turns anyone can love this ride.', 48, 'https://www.youtube.com/embed/IpJ9l2w4haw', 'https://coasterpedia.net/w/images/thumb/9/95/Cedar_Creek_Mine_Ride_train.jpg/500px-Cedar_Creek_Mine_Ride_train.jpg');
@@ -96,7 +96,3 @@ VALUES ('Wilderness Run', 1979, 6, 19, 1, 'This a great first coaster for the ki
 
 INSERT INTO cedar_point_coasters ([name], build_year, speed, height, duration, [description], min_height, ride_video, ride_image)
 VALUES ('Woodstock Express', 1999, 25, 38, 1, 'This is a fun wild ride that will take you up and down and all around. Offer fantatic thrills for first time riders!', 36, 'https://www.youtube.com/embed/fDBydpPplzQ', 'https://www.themeparkreview.com/forum/files/img_6635_942.jpg');
-
-SELECT * FROM ride_forum
-
-SELECT * FROM cedar_point_coasters
