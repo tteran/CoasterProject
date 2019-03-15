@@ -32,6 +32,6 @@ namespace CoasterProject.Models
         /// <summary>
         /// Gets the results.
         /// </summary>
-        public IList<ForumPost> Results { get; set; }
+        public IList<ForumPost> PostResults { get; set; }
     }
 }

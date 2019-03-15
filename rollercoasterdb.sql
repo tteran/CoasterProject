@@ -96,3 +96,5 @@ VALUES ('Wilderness Run', 1979, 6, 19, 1, 'This a great first coaster for the ki
 
 INSERT INTO cedar_point_coasters ([name], build_year, speed, height, duration, [description], min_height, ride_video, ride_image)
 VALUES ('Woodstock Express', 1999, 25, 38, 1, 'This is a fun wild ride that will take you up and down and all around. Offer fantatic thrills for first time riders!', 36, 'https://www.youtube.com/embed/fDBydpPplzQ', 'https://www.themeparkreview.com/forum/files/img_6635_942.jpg');
+
+SELECT * FROM ride_forum

@@ -53,7 +53,7 @@ body {
 
 .tile {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 10px;
 }
 
@@ -89,12 +89,9 @@ body {
 }
 
 .tile-info {
-    padding-left: 100px;
-    padding-right: 100px;
+    padding: 27px 100px;
     margin-bottom: 25px;
     background-color: #F2F3F4;
-    padding-top: 25px;
-    padding-bottom: 30px;
     font-size: 1.1em;
     font-weight: 500;
 }

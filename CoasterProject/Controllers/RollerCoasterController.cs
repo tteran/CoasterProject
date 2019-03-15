@@ -16,6 +16,7 @@ namespace CoasterProject.Controllers
             this.rollerCoasterDAO = rollerCoasterDAO;
         }
 
+        [HttpGet]
         public IActionResult Index()
         {
             IList<RollerCoaster> coasters = rollerCoasterDAO.GetCoasters();
@@ -23,6 +24,7 @@ namespace CoasterProject.Controllers
             return View(coasters);
         }
 
+        [HttpGet]
         public IActionResult Detail(int id)
         {
             RollerCoaster rollerCoaster = rollerCoasterDAO.GetCoaster(id);

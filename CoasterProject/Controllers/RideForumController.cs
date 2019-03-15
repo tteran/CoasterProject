@@ -16,34 +16,7 @@ namespace CoasterProject.Controllers
             this.forumDAO = forumDAO;
         }
 
-        [HttpGet]
-        public IActionResult New()
-        {
-            return View();
-        }
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult New(ForumPost model)
-        {
-            if(!ModelState.IsValid)
-            {
-                forumDAO.SavePost(model);
-                return RedirectToAction("Index", new { Username = model.Username, Rating = model.Rating, ForumTitle = model.ForumTitle, ForumText = model.ForumText });
-            }
 
-            return View(model);
-            
-        }
-
-        [HttpGet]
-        public IActionResult Index(ForumPost model)
-        {
-            IList<ForumPost> posts = forumDAO.GetPosts();
-
-            model.Results = posts;
-
-            return View(model);
-        }
     }
 }
