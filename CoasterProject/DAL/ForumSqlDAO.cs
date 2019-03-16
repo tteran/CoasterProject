@@ -45,9 +45,9 @@ namespace CoasterProject.DAL
             return forumPosts;
         }
 
-        public int SavePost(ForumPost newPost)
+        public bool SavePost(ForumPost newPost)
         {
-            int newPostsAdded = 0;
+            bool wasPostAdded;
 
             try
             {
@@ -64,14 +64,18 @@ namespace CoasterProject.DAL
                     cmd.Parameters.AddWithValue("@forum_text", newPost.ForumText);
 
                     cmd.ExecuteNonQuery();
+
+                    wasPostAdded = true;
                 }
             }
             catch(SqlException ex)
             {
+                wasPostAdded = false;
                 throw;
             }
 
-            return newPostsAdded++;
+            return wasPostAdded;
+
         }
 
         private ForumPost ConvertForumPostToReader(SqlDataReader reader)

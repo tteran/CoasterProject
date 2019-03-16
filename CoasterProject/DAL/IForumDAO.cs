@@ -19,6 +19,6 @@ namespace CoasterProject.DAL
         /// </summary>
         /// <param name="newPost"></param>
         /// <returns></returns>
-        int SavePost(ForumPost newPost);
+        bool SavePost(ForumPost newPost);
     }
 }

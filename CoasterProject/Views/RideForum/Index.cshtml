@@ -1,7 +1,22 @@
-﻿
+﻿@model IList<ForumPost>
 @{
     ViewData["Title"] = "Index";
+    string message = (string)TempData["SavedPost"];
 }
 
-<h2>Index</h2>
+<h1>Ride Forum</h1>
+
+@if (!string.IsNullOrEmpty(message))
+{
+    <div class="alert">
+        <p>@message</p>
+    </div>
+}
+
+@foreach (ForumPost post in Model)
+{
+    <h2>@post.Username, @post.PostDate.ToShortDateString()</h2>
+    <h3>@post.ForumTitle</h3>
+    <p>@post.ForumText</p>
+}
 

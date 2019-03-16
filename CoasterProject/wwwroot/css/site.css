@@ -4,6 +4,10 @@ body {
     font-family: 'Crimson Text', serif;
 }
 
+main {
+    margin-top: 79px;
+}
+
 /*Nav Styling*/
 .top-nav {
     display: grid;
@@ -100,41 +104,6 @@ body {
 
 
 /*Detail page view*/
-
-@media only screen and (min-width: 1920px) {
-    .detail-image {
-        width: 100%;
-        height: 950px;
-    }
-    
-    .ride-video {
-        width: 100%;
-        height: 900px;
-    }
-
-    .top-nav {
-        padding-bottom: 10px;
-    }
-
-    .tile {
-        padding-bottom: 45px;
-        border-bottom: 5px solid #fab84a;
-        padding-left: 240px;
-        padding-right: 200px;
-    }
-
-    .tile-info {
-        padding-left: 280px;
-    }
-}
-
-@media only screen and (max-width: 1280px)
-{
-    .detail-image {
-        width: 100%;
-        height: 580px;
-    }
-}
 
 .banner {
     position: relative;
@@ -239,3 +208,40 @@ body {
 }
 
 /*End ride forum styling*/
+
+/*Media Query Styling*/
+@media only screen and (min-width: 1920px) {
+    .detail-image {
+        width: 100%;
+        height: 950px;
+    }
+
+    .ride-video {
+        width: 100%;
+        height: 900px;
+    }
+
+    .top-nav {
+        padding-bottom: 10px;
+    }
+
+    .tile {
+        padding-bottom: 45px;
+        border-bottom: 5px solid #fab84a;
+        padding-left: 240px;
+        padding-right: 200px;
+    }
+
+    .tile-info {
+        padding-left: 280px;
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    .detail-image {
+        width: 100%;
+        height: 580px;
+    }
+}
+
+/*Media Query Styling End*/

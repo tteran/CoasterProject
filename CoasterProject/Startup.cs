@@ -32,6 +32,17 @@ namespace CoasterProject
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
+            // Indicates Session should be saved "in memory"
+            services.AddDistributedMemoryCache();
+
+            // Sets the options on Session
+            services.AddSession(options =>
+            {
+                // Sets session expiration to 20 minutes
+                options.IdleTimeout = TimeSpan.FromMinutes(20);
+                options.Cookie.HttpOnly = true;
+            });
+
             services.AddTransient<IRollerCoasterDAO>(r => new RollerCoasterSqlDAO(Configuration.GetConnectionString("Default")));
             services.AddTransient<IForumDAO>(f => new ForumSqlDAO(Configuration.GetConnectionString("Default")));
 
@@ -54,7 +65,7 @@ namespace CoasterProject
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
-
+            app.UseSession();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(

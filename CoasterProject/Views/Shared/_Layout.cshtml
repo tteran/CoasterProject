@@ -13,7 +13,7 @@
             <a asp-controller="home" asp-action="index">
                 <img src="https://cdn-cloudfront.cfauthx.com/binaries/content/gallery/cp-en-us/logos/cedarpoint-logo_224x34.png" />
             </a>
-            
+
         </div>
         <div class="list">
             <ul>
@@ -23,20 +23,23 @@
                 </a>
                 <a asp-controller="rollercoaster" asp-action="index">
                     <li>Play</li>
-                </a>                
+                </a>
                 <li>Stay</li>
                 <li>Tickets</li>
                 <li>Help</li>
             </ul>
-        </div>        
+        </div>
     </div>
 
-    <div>
+    <main>
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; 2019 - Coaster Project</p>
-        </footer>
+    </main>
+ 
+  <div>
+    <hr />
+    <footer>
+        <p>&copy; 2019 - Coaster Project</p>
+    </footer>
     </div>
 
 </body>
