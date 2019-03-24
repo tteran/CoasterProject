@@ -4,19 +4,30 @@
     string message = (string)TempData["SavedPost"];
 }
 
-<h1>Ride Forum</h1>
+<div class="ride-forum-index">
+        <h1>Ride Forum</h1>
 
-@if (!string.IsNullOrEmpty(message))
-{
-    <div class="alert">
-        <p>@message</p>
-    </div>
-}
+        <a asp-controller="RideForum" asp-action="new">Post a Message!</a>
 
-@foreach (ForumPost post in Model)
-{
-    <h2>@post.Username, @post.PostDate.ToShortDateString()</h2>
-    <h3>@post.ForumTitle</h3>
-    <p>@post.ForumText</p>
-}
+        @if (!string.IsNullOrEmpty(message))
+        {
+            <div class="alert">
+                <p>@message</p>
+            </div>
+        }
+
+        @foreach (ForumPost post in Model)
+        {
+            <div class="forum-side-info">
+                <h2>@post.Username, @post.PostDate.ToShortDateString()</h2>
+                <h3>@post.ForumTitle</h3>
+            </div>
+
+            <div class="forum-text-area">
+                <p>@post.ForumText</p>
+            </div>
+          
+        }
+
+</div>
 
