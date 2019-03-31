@@ -3,35 +3,36 @@
     ViewData["Title"] = "New";
 }
 
-<h1 class="forum-h1">Roller Coaster Forum</h1>
+<div class="new-forum">
+    <h1 class="forum-h1">Roller Coaster Forum</h1>
 
-<form method="post" asp-controller="RideForum" asp-action="New">
+    <form method="post" asp-controller="RideForum" asp-action="New">
 
-    <div class="ride-forum">
+        <div class="ride-forum">
 
-        <div class="forum-username">
-            <input asp-for="Username" placeholder="Your Username" type="text" />
-            <span asp-validation-for="Username"></span>
+            <div class="forum-username">
+                <input asp-for="Username" placeholder="Your Username" type="text" />
+                <span asp-validation-for="Username"></span>
+            </div>
+
+            <div class="forum-rating">
+                <input asp-for="Rating" placeholder="Your Rating" type="number" />
+                <span asp-validation-for="Rating"></span>
+            </div>
+
+            <div class="forum-forum-title">
+                <input asp-for="ForumTitle" placeholder="Your Subject Title" type="text" />
+                <span asp-validation-for="ForumTitle"></span>
+            </div>
+
+            <div class="forum-forum-text">
+                <textarea asp-for="ForumText" rows="4" cols="22" placeholder="Your Subject Message" type="text"> </textarea>
+                <span asp-validation-for="ForumText"></span>
+            </div>
+
         </div>
 
-        <div class="forum-rating">
-            <input asp-for="Rating" placeholder="Your Rating" type="number" />
-            <span asp-validation-for="Rating"></span>
-        </div>
+        <input class="forum-submit" type="submit" value="Submit" />
 
-        <div class="forum-forum-title">
-            <input asp-for="ForumTitle" placeholder="Your Subject Title" type="text" />
-            <span asp-validation-for="ForumTitle"></span>
-        </div>
-
-        <div class="forum-forum-text">
-            <textarea asp-for="ForumText" rows="4" cols="22" placeholder="Your Subject Message" type="text"> </textarea>
-            <span asp-validation-for="ForumText"></span>
-        </div>
-
-    </div>
-
-    <input class="forum-submit" type="submit" value="Submit" />
-
-</form>
-
+    </form>
+</div>

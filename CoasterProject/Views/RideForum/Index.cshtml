@@ -23,15 +23,19 @@
             <div class="forum-info">
                 @foreach (ForumPost post in Model)
                 {
+
+                 <div class="forum-info-detail">
                     <h3>@post.Username <span>@post.PostDate.ToShortDateString()</span></h3>
 
-                    for(int i = 0; i < post.Rating; i++)
+                    @for (int i = 0; i < post.Rating; i++)
                     {
                         <img class="gold-star" src="~/images/GoldStar.png" />
                     }
 
                     <h3>@post.ForumTitle</h3>
                     <p>@post.ForumText</p>
+
+                </div>
                 }
             </div>
         </div>

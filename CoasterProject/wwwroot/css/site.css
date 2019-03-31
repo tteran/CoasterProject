@@ -13,7 +13,7 @@
 
 body {
     font-family: 'Crimson Text', serif;
-    margin: 0;
+    margin: 0 auto;
 }
 
 main {
@@ -184,18 +184,49 @@ a {
 .home-page-pic {
     width: 100%;
     height: auto;
-    position: relative;
-    z-index: 1;
+}
+
+.home-page-info {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 25px;
+    padding-right: 250px;
+    padding-left: 250px;
+}
+
+.home-page-info div {
+    border: 1px solid black;
+    padding: 5px;
+    height: 540px;
+    background-color: white;
+    padding-right: 50px;
+    padding-left: 50px;
+    margin-left: 25px;
+    margin-right: 25px;
+    text-align: center;
+    box-shadow: 5px 5px 3px black;
+}
+
+.home-page-section-1 {
+    background-image: linear-gradient(-120deg, #6C7ED8, #FAA613);
+    width: 100%;
+    height: 700px;
 }
 
 /*Home Page View End*/
-
-/*Ride Forum Styling*/
-
+/*Ride Forum Index Styling*/
 span.field-validation-error {
     color: red;
     display: block;
     font-weight: bold;
+}
+
+.new-forum {
+    background-color: var(--DarkCyan);
+}
+
+.forum-info-detail {
+    border-bottom: 1px solid black;
 }
 
 .alert {
@@ -238,44 +269,82 @@ span.field-validation-error {
     text-align: center;
 }
 
-.ride-forum {
-    display: flex;
-    flex-direction: column;
-    background-color: lightblue;
-    width: 25%;
-    margin-bottom: 15px;
-}
+/*End Ride Forum Index Styling*/
 
-.ride-forum div {
-    padding: 20px;
-    text-align: center;
-}
-
-.forum-submit {
-    margin: auto;
-    border-radius: 7px;
-    background-color: green;
-    color: white;
-    font-size: 16px;
-    padding: 10px;
-    text-shadow: 5px;
-    width: 10%;   
-}
-
-.forum-submit:hover {
-    background-color: darkgreen;
-}
-
-.forum-h1 {
-    margin-top: 100px;
-}
+/*Ride Forum New Styling*/
 
 .ride-forum textarea {
     resize: none;
     font-family: Arial;
 }
 
-/*End Ride Forum Styling*/
+.new-forum {
+    padding-left: 15px;
+    padding-bottom: 15px;
+}
+
+input[type=text] {
+    box-sizing: border-box;
+    width: 25%;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 3px;
+    margin: 10px 0;
+
+}
+
+input[type=number] {
+    box-sizing: border-box;
+    width: 25%;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 3px;
+    margin: 10px 0;
+}
+
+textarea {
+    box-sizing: border-box;
+    width: 25%;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 3px;
+    margin: 10px 0;
+}
+
+input[type=submit] {
+    cursor: pointer;
+    width: 10%;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+input[type=submit] {
+    color: white;
+    background-color: green;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 1.1em;
+}
+
+input[type=submit]:hover {
+    background-color: darkgreen;
+}
+
+/*End Ride Forum New Styling*/
+
+/*Footer Styling*/
+
+footer {
+    background-color: var(--CPBlue);
+    height: 100px;
+}
+
+footer p {
+    color: white;
+    margin-top: 0;
+}
+
+/*End Footer Styling*/
 
 /*Media Query Styling*/
 @media only screen and (min-width: 1920px) {
