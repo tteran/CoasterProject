@@ -192,8 +192,50 @@ a {
 
 /*Ride Forum Styling*/
 
+span.field-validation-error {
+    color: red;
+    display: block;
+    font-weight: bold;
+}
+
+.alert {
+    font-size: 24px;
+    background-color: forestgreen;
+    width: auto;
+    text-align: center;
+    font-weight: bold;
+}
+
+.forum-header a {
+    font-size: 2em;
+}
+
 .ride-forum-index {
     background-color: var(--DarkCyan);
+}
+
+.gold-star {
+    width: auto;
+    height: 20px;
+}
+
+.ride-forum-index-inner {
+    background-color: lightblue;
+    margin-left: 100px;
+    margin-right: 100px;
+    padding-top: 50px;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+    padding-bottom: 30px;
+}
+
+.forum-info {
+    padding-left: 50px;
+    font-size: 2em;
+}
+
+.forum-header {
+    text-align: center;
 }
 
 .ride-forum {
@@ -231,11 +273,6 @@ a {
 .ride-forum textarea {
     resize: none;
     font-family: Arial;
-}
-
-.alert {
-    font-weight: bold;
-    font-size: 18px;
 }
 
 /*End Ride Forum Styling*/

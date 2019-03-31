@@ -13,20 +13,20 @@ namespace CoasterProject.Models
     {
         public int Id { get; set; }
 
-        [Required(ErrorMessage = "Username must be at least 8 characters")]
-        [MinLength(8)]
+        [Required]
+        [StringLength(100, ErrorMessage = "Username must be at least 8 characters", MinimumLength = 8)]
         public string Username { get; set; }
 
-        [Required(ErrorMessage = "Rating must be between 1 and 10")]
-        [Range(1, 10)]
+        [Required]
+        [Range(1, 10, ErrorMessage = "Rating must be between 1 and 10")]
         public int Rating { get; set; }
 
         public DateTime PostDate { get; set; }
 
-        [Required]
+        [Required (ErrorMessage = "Required")]
         public string ForumTitle { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Required")]
         public string ForumText { get; set; }
 
         /// <summary>

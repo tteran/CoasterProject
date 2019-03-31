@@ -5,29 +5,35 @@
 }
 
 <div class="ride-forum-index">
-        <h1>Ride Forum</h1>
+    <div class="ride-forum-index-inner">
+        <div class="forum-header">
+            <h1>Ride Forum</h1>
 
-        <a asp-controller="RideForum" asp-action="new">Post a Message!</a>
+            <a asp-controller="RideForum" asp-action="new">Post a Message!</a>
+        </div>
+     
 
         @if (!string.IsNullOrEmpty(message))
         {
-            <div class="alert">
-                <p>@message</p>
+            <div>
+                <p class="alert">@message</p>
             </div>
         }
 
-        @foreach (ForumPost post in Model)
-        {
-            <div class="forum-side-info">
-                <h2>@post.Username, @post.PostDate.ToShortDateString()</h2>
-                <h3>@post.ForumTitle</h3>
-            </div>
+            <div class="forum-info">
+                @foreach (ForumPost post in Model)
+                {
+                    <h3>@post.Username <span>@post.PostDate.ToShortDateString()</span></h3>
 
-            <div class="forum-text-area">
-                <p>@post.ForumText</p>
-            </div>
-          
-        }
+                    for(int i = 0; i < post.Rating; i++)
+                    {
+                        <img class="gold-star" src="~/images/GoldStar.png" />
+                    }
 
+                    <h3>@post.ForumTitle</h3>
+                    <p>@post.ForumText</p>
+                }
+            </div>
+        </div>
 </div>
 

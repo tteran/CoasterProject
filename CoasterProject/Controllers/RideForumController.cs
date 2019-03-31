@@ -27,13 +27,20 @@ namespace CoasterProject.Controllers
         public IActionResult New(ForumPost forumPost)
         {
             bool wasSaved = forumDAO.SavePost(forumPost);
-
             if (wasSaved)
             {
                 TempData["SavedPost"] = "Thank you for the feedback!";
             }
 
-            return RedirectToAction("Index");/*, new { Username = forumPost.Username, Rating = forumPost.Rating, ForumTitle = forumPost.ForumTitle, ForumText = forumPost.ForumText });*/
+            if(!ModelState.IsValid)
+            {
+                return View(forumPost);
+            }
+            else
+            {
+                return RedirectToAction("Index");
+            }
+
         }
 
         [HttpGet]
